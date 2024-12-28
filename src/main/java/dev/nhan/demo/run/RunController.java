@@ -1,13 +1,18 @@
-package dev.nhan.demo.controller;
+package dev.nhan.demo.run;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @RestController
-public class HelloController {
+public class RunController {
+
+    private List<Run>  runs = new ArrayList<>();
 
     @GetMapping("/hello")
-    public String hello() {
+    String home() {
         return "Hello, World!";
     }
-} 
+}
